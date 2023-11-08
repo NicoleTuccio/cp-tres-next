@@ -1,0 +1,44 @@
+// Adicione estas regras ao final do seu arquivo page.scss
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  legend {
+    font-weight: bold;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .redes-socias {
+    margin-top: 20px;
+    text-align: center;
+  
+    h2 {
+      color: red ;
+    }
+  
+    p {
+      margin: 5px 0;
+    }
+  }
+  

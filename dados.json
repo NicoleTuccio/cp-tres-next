@@ -2,14 +2,14 @@
     "produto":[
         {
             "id": 1,
-            "titulo": "Garrafa Malvel Panera Negra",
+            "titulo": "Garrafa Marvel Pantera Negra",
             "quantidade": 4,
             "preco": 65.99
 
         },
         {
             "id": 2,
-            "titulo": "Garrafa Malvel Homem de Ferrp",
+            "titulo": "Garrafa Marvel Homem de Ferro",
             "quantidade": 5,
             "preco": 65.99
         }

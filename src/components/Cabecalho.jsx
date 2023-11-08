@@ -1,4 +1,5 @@
 import Link from "next/link";
+import './Cabecalho.scss'
 
 
 export default function Cabecalho(){

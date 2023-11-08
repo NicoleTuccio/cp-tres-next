@@ -1,0 +1,27 @@
+
+
+.produtos-dc {
+    text-align: center;
+    margin-top: 20px;
+  
+    h1 {
+      color: blue;
+    }
+  
+    .produto {
+      display: inline-block;
+      text-align: center;
+      margin: 10px;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+  
+      p {
+        font-weight: bold;
+        color: red;
+      }
+    }
+  }
+  

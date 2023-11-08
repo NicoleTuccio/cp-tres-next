@@ -1,3 +1,5 @@
+import './page.scss'
+
 export default function Contatos(){
     return(
         <>
@@ -18,9 +20,10 @@ export default function Contatos(){
                     Mensagem:
                 </label>
                 <input type="text" name="mensagem" id="mensagem" />
+                <button>Enviar</button>
             </form>
 
-            <div>
+            <div className='redes-socias'>
                 <h2>Nossas Redes Socias</h2>
                 <p>Facebook Universo Nerd Store</p>
                 <p>Instagram: univers_nerd</p>

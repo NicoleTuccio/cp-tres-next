@@ -1,53 +1,59 @@
 "use client"
-import Image from "next/image"
-import { useState } from "react"
 
-export default function Marvel(){
-    
-    const[produtos, setProdutos] = useState([])
+import Image from "next/image";
+import { useState, useEffect} from "react";
+import './page.scss';
 
-    return(
-        <div>
-            <h1>Produtos Marvel</h1>
-            
-            <Image
-            src={`/copo1.jpeg`}
-            alt="Copo Pantera Negra"
-            width={300}
-            height={300}
-            ></Image>
-            <Image
-            src={`/copo2.jpeg`}
-            alt="Copo Homem de Ferro"
-            width={300}
-            height={300}></Image>
+export default function Marvel() {
+  const [produtos, setProdutos] = useState([]);
 
-            <div>
-                <h2>Tabela de preços</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Produto</th>
-                            <th>Quantidade</th>
-                            <th>Preco</th>
-                        </tr> 
-                    </thead>
-                    <tbody>
-                        {
-                            produtos.map(prod =>(
-                                <tr key={prod.id}>
-                                    <td>{prod.titulo}</td>
-                                    <td>{prod.quantidade}</td>
-                                    <td>R${parseFloat(prod.preco).toFixed(2)}</td>
-                                </tr>
-                            ))
-                        }
-                    </tbody>
-                </table>
-            </div>
+  useEffect(() => {
+    fetch(`http://localhost:5000/produto`)
+      .then(resp => resp.json())
+      .then(resp => setProdutos(resp))
+      .catch(error => console.error(error));
+  }, []);
 
-        </div>
+  return (
+    <div className='produtos-marvel'>
+      <h2>Produtos Marvel</h2>
 
-        
-    )
+      <div className='imagem'>
+        <Image
+          src={`/copo1.jpeg`}
+          alt="Copo Pantera Negra"
+          width={300}
+          height={300}
+        />
+        <Image
+          src={`/copo2.jpeg`}
+          alt="Copo Homem de Ferro"
+          width={300}
+          height={300}
+        />
+      </div>
+
+      <div className='tabela-precos'>
+        <h2>Tabela de preços</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome do produto</th>
+              <th>Quantidade</th>
+              <th>Preço</th>
+            </tr>
+          </thead>
+          <tbody>
+            {produtos.map(prod => (
+              <tr key={prod.id}>
+                <td>{prod.titulo}</td>
+                <td>{prod.quantidade}</td>
+                <td>R${parseFloat(prod.preco).toFixed(2)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
 }

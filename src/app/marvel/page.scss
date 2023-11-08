@@ -1,0 +1,42 @@
+
+.produtos-marvel {
+    text-align: center;
+    margin-top: 20px;
+  
+    h2 {
+      color: blue;
+    }
+  
+    .imagem {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  
+      img {
+        max-width: 300px;
+        height: auto;
+        margin: 0 10px;
+      }
+    }
+  
+    .tabela-precos {
+      margin-top: 20px;
+  
+      h2 {
+        color: red;
+      }
+  
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+  
+      th, td {
+        border: 1px solid red;
+        padding: 8px;
+        text-align: center;
+      }
+    }
+  }
+  
