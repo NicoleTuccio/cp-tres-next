@@ -5,28 +5,28 @@ export default function dcComics(){
         <div>
             <h1>Produtos DC Comics</h1>
             <Image
-            src={`/mousepag.jpg`}
+            src={`/mousepag.jpeg`}
             alt="Mouse Pag"
-            width={300}
-            height={300}
+            width={200}
+            height={200}
             ></Image>
             <Image
-            src={`/chaveiro1.jpg`}
+            src={`/chaveiro1.jpeg`}
             alt="Chaveiro 1"
-            width={300}
-            height={300}
+            width={200}
+            height={200}
             ></Image>
             <Image
-            src={`/chaveiro2.jpg`}
+            src={`/chaveiro2.jpeg`}
             alt="Chaveiro"
-            width={300}
-            height={300}
+            width={200}
+            height={200}
             ></Image>
             <Image
-            src={`/capaNote.jpg`}
+            src={`/capaNote.jpeg`}
             alt="Capa Notebook"
-            width={300}
-            height={300}
+            width={200}
+            height={200}
             ></Image>
         </div>
     )
